@@ -43,5 +43,12 @@
         "description": "desc",
         "imageUrl": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg",
         "difficultyLevel": "5"
+    },
+    {
+        "id": 7,
+        "name": "new cube",
+        "description": "asdasd",
+        "imageUrl": "https://i.pinimg.com/originals/10/31/68/103168324e5e66fd1e797d33b2f27ffe.jpg",
+        "difficultyLevel": "5"
     }
 ]
