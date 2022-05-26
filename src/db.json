@@ -18,5 +18,17 @@
         "name": "Gan256 Air XM",
         "imageUrl": "https://ae01.alicdn.com/kf/HTB1CSddXRxRMKJjy0Fdq6yifFXa6/Gan-356-Air-SM-3x3-Black-Magic-cube-GAN-Air-SM-Magnetic-3x3x3-Speed-cube-gans.jpg",
         "difficultyLevel": 5
+    },
+    {
+        "name": "Test",
+        "description": "trest test",
+        "imageUrl": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg",
+        "difficultyLevel": "1"
+    },
+    {
+        "name": "Classic Rubic",
+        "description": "classic",
+        "imageUrl": "https://i.pinimg.com/originals/10/31/68/103168324e5e66fd1e797d33b2f27ffe.jpg",
+        "difficultyLevel": "1"
     }
 ]
