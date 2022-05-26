@@ -1,0 +1,26 @@
+{
+  "name": "softuni-cubicle",
+  "version": "1.0.0",
+  "description": "Softuni JS Backend  Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivailopapazov/softuni-cubicle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivailopapazov/softuni-cubicle/issues"
+  },
+  "homepage": "https://github.com/ivailopapazov/softuni-cubicle#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
