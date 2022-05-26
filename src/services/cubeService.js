@@ -14,7 +14,7 @@ exports.getAll = (search = '', fromInput, toInput) => {
     return result;
 };
 
-exports.getOne = (cubeId) => cubes[cubeId];
+exports.getOne = (cubeId) => cubes.find(x => x.id === Number(cubeId));
 
 exports.save = (cube) => {
     cubes.push({ id: cubes[cubes.length - 1].id + 1, ...cube });
