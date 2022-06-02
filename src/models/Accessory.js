@@ -15,11 +15,11 @@ const accessorySchema = new mongoose.Schema({
             },
             message: 'Image url should be a link'
         },
-        description: {
-            type: String,
-            maxLength: 120,
-            required: true,
-        }
+    },
+    description: {
+        type: String,
+        maxLength: 120,
+        required: true,
     }
 });
 
