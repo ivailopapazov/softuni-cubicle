@@ -6,14 +6,19 @@ const Accessory = require('../models/Accessory');
 const Cube = require('../models/Cube');
 
 exports.getAll = async (search = '', fromInput, toInput) => {
-    let cubes = await Cube.find().lean();
+    const from = Number(fromInput) || 0;
+    const to = Number(toInput) || 6;
 
-    // const from = Number(fromInput) || 0;
-    // const to = Number(toInput) || 6;
+    // let cubes = await Cube.find(
+    //     { 
+    //         name: { $regex: new RegExp(search, 'i') },
+    //         difficultyLevel: { $and: [{ $gte: from }, { $lte: to }] } 
+    //     },
+    // ).lean();
     
-    // const result = cubes
-    //     .filter(x => x.name.toLowerCase().includes(search.toLowerCase()))
-    //     .filter(x => x.difficultyLevel >= from && x.difficultyLevel <= to);
+    let cubes = await Cube.find({name: { $regex: new RegExp(search, 'i') }})
+        .where('difficultyLevel').lte(to).gte(from)
+        .lean();
 
     return cubes;
 };
@@ -36,9 +41,9 @@ exports.create = (cube) => Cube.create(cube);
 exports.attachAccessory = async (cubeId, accessoryId) => {
     const cube = await Cube.findById(cubeId);
     const accessory = await Accessory.findById(accessoryId);
-    
+
     // const cubeObjectId = mongoose.Types.ObjectId(cubeId);
-    
+
     cube.accessories.push(accessory);
     accessory.cubes.push(cube);
 
