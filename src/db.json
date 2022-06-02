@@ -1,54 +1,26 @@
 [
     {
-        "id": 0,
+        "_id": 0,
         "name": "Gan356 Air SM",
         "imageUrl": "https://ae01.alicdn.com/kf/HTB1CSddXRxRMKJjy0Fdq6yifFXa6/Gan-356-Air-SM-3x3-Black-Magic-cube-GAN-Air-SM-Magnetic-3x3x3-Speed-cube-gans.jpg",
         "difficultyLevel": 3
     },
     {
-        "id": 1,
+        "_id": 1,
         "name": "Eco-Dark",
         "imageUrl": "https://thingsidesire.com/wp-content/uploads/2018/06/Eco-Dark-Rubik%E2%80%99s-Cube2.jpg",
         "difficultyLevel": 4
     },
     {
-        "id": 2,
+        "_id": 2,
         "name": "Eco-Dark 2",
         "imageUrl": "https://thingsidesire.com/wp-content/uploads/2018/06/Eco-Dark-Rubik%E2%80%99s-Cube2.jpg",
         "difficultyLevel": 6
     },
     {
-        "id": 3,
+        "_id": 3,
         "name": "Gan256 Air XM",
         "imageUrl": "https://ae01.alicdn.com/kf/HTB1CSddXRxRMKJjy0Fdq6yifFXa6/Gan-356-Air-SM-3x3-Black-Magic-cube-GAN-Air-SM-Magnetic-3x3x3-Speed-cube-gans.jpg",
         "difficultyLevel": 5
-    },
-    {
-        "id": 4,
-        "name": "Test",
-        "description": "trest test",
-        "imageUrl": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg",
-        "difficultyLevel": "1"
-    },
-    {
-        "id": 5,
-        "name": "Classic Rubic",
-        "description": "classic",
-        "imageUrl": "https://i.pinimg.com/originals/10/31/68/103168324e5e66fd1e797d33b2f27ffe.jpg",
-        "difficultyLevel": "1"
-    },
-    {
-        "id": 6,
-        "name": "New Test",
-        "description": "desc",
-        "imageUrl": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg",
-        "difficultyLevel": "5"
-    },
-    {
-        "id": 7,
-        "name": "new cube",
-        "description": "asdasd",
-        "imageUrl": "https://i.pinimg.com/originals/10/31/68/103168324e5e66fd1e797d33b2f27ffe.jpg",
-        "difficultyLevel": "5"
     }
 ]
