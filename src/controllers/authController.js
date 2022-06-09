@@ -1,15 +1,16 @@
 const router = require('express').Router();
 
 const authService = require('../services/authService');
+const { sessionName } = require('../constants');
 
 router.get('/register', (req, res) => {
     res.render('auth/register');
 });
 
-router.post('/register', async(req, res) => {
-    
+router.post('/register', async (req, res) => {
+
     let createdUser = await authService.register(req.body);
-    
+
     if (createdUser) {
         res.redirect('/auth/login');
     } else {
@@ -29,8 +30,13 @@ router.post('/login', async (req, res) => {
         return res.redirect('/404');
     }
 
-    res.cookie('session', token);
+    res.cookie(sessionName, token, { httpOnly: true });
 
+    res.redirect('/');
+});
+
+router.get('/logout', (req, res) => {
+    res.clearCookie(sessionName);
     res.redirect('/');
 });
 

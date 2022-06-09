@@ -2,9 +2,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
 const User = require('../models/User');
-
-const saltRounds = 10;
-const secret = 'alsdkjfaposdl;fgijhsdaklgjfhaskdlfghjasdklfgjh';
+const { secret, saltRounds } = require('../constants');
 
 exports.register = async ({ username, password, repeatPassword }) => {
     // TODO: return form validation message
