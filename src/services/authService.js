@@ -48,7 +48,7 @@ exports.login = async ({ username, password }) => {
             if (err) {
                 return reject(err);
             }
-    
+
             resolve(token);
         });
     });
