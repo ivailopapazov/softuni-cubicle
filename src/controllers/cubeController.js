@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const {body, validationResult} = require('express-validator');
 
 const cubeService = require('../services/cubeService');
 const accessoryService = require('../services/accessoryService');
@@ -8,26 +9,40 @@ router.get('/create', isAuth, (req, res) => {
     res.render('create');
 });
 
-router.post('/create', isAuth, async (req, res) => {
-    const cube = req.body;
+router.post(
+    '/create',
+    isAuth,
+    body('name', 'Name is required!').not().isEmpty(),
+    body('description').isLength({min: 5, max: 120}),
+    body('difficultyLevel', 'Difficulty Level is required to be in range 1 to 6').toInt().isInt({min: 1, max: 6}),
+    async (req, res) => {
+        const cube = req.body;
 
-    cube.owner = req.user._id;
+        cube.owner = req.user._id;
 
-    // Validate
-    if (cube.name.length < 2) {
-        return res.status(400).send('Invalid request');
+        const errors = validationResult(req);
+
+        if (!errors.isEmpty()) {
+            console.log(errors);
+            return res.status(400).send(errors.array()[0].msg);
+        }
+
+        // Validate
+        if (cube.name.length < 2) {
+            return res.status(400).send('Invalid request');
+        }
+
+        // Save data
+        try {
+            await cubeService.create(cube);
+
+            res.redirect('/');
+        } catch (error) {
+            console.log(error);
+            res.status(400).send(error);
+        }
     }
-
-    // Save data
-    try {
-        await cubeService.create(cube);
-
-        res.redirect('/');
-    } catch (error) {
-        console.log(error);
-        res.status(400).send(error);
-    }
-});
+);
 
 router.get('/details/:id', async (req, res) => {
     const cube = await cubeService.getOneDetails(req.params.id).lean();
